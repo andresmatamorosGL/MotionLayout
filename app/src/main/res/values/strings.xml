@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Gorilla Motion</string>
+    <string name="img_description">Gorilla blog post</string>
+    <string name="message_title">Welcome</string>
+    <string name="message_body">to our App!</string>
+</resources>

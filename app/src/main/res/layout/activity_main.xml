@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ic_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_description"
+        app:srcCompat="@drawable/ic_logo"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <ImageView
+        android:id="@+id/ic_monkey_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_description"
+        app:srcCompat="@drawable/ic_gorilla_body"/>
+
+    <ImageView
+        android:id="@+id/ic_gorilla_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_description"
+        app:srcCompat="@drawable/ic_gorilla_head" />
+
+    <include
+        android:id="@+id/info_layout"
+        layout="@layout/layout_info" />
+
+    <ImageView
+        android:id="@+id/ic_leaf_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/ic_leaf_1" />
+
+    <ImageView
+        android:id="@+id/ic_leaf_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/ic_leaf_5" />
+
+    <ImageView
+        android:id="@+id/ic_leaf_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/ic_leaf_4" />
+
+    <ImageView
+        android:id="@+id/ic_leaf_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/ic_leaf_2"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_title"
+        android:textAllCaps="true"
+        android:textColor="#284363"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/message_body"
+        android:textAllCaps="true"
+        android:textColor="#284363"
+        android:textSize="36sp" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
