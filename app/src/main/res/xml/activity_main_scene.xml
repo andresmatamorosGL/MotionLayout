@@ -5,13 +5,9 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
         <KeyFrameSet>
-            <KeyPosition
-                motion:framePosition="50"
-                motion:keyPositionType="parentRelative"
-                motion:motionTarget="@+id/ic_logo"
-                motion:percentX="0.1" />
             <KeyPosition
                 motion:framePosition="50"
                 motion:keyPositionType="parentRelative"
@@ -38,23 +34,28 @@
                 motion:motionTarget="@+id/ic_leaf_2"
                 motion:percentX="0.8"
                 motion:percentY="0" />
-            <KeyAttribute
-                android:scaleX="0.8"
-                android:scaleY="0.8"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/ic_logo" />
-            <KeyAttribute
-                android:rotation="25"
-                motion:framePosition="25"
-                motion:motionTarget="@id/ic_gorilla_head" />
-            <KeyAttribute
-                android:rotation="-25"
+            <KeyPosition
                 motion:framePosition="50"
-                motion:motionTarget="@id/ic_gorilla_head" />
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/ic_cloud"
+                motion:percentX="0.1" />
+
             <KeyAttribute
                 android:rotation="15"
+                motion:framePosition="25"
+                motion:motionTarget="@id/ic_android_robot" />
+            <KeyAttribute
+                android:rotation="-15"
+                motion:framePosition="50"
+                motion:motionTarget="@id/ic_android_robot" />
+            <KeyAttribute
+                android:rotation="15"
+                motion:framePosition="75"
+                motion:motionTarget="@id/ic_android_robot" />
+            <KeyAttribute
+                android:rotation="0"
                 motion:framePosition="100"
-                motion:motionTarget="@+id/ic_gorilla_head" />
+                motion:motionTarget="@+id/ic_android_robot" />
             <KeyAttribute
                 android:rotation="-14"
                 motion:framePosition="100"
@@ -84,34 +85,6 @@
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint
-            android:id="@+id/ic_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="95dp"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-
-        <Constraint
-            android:id="@+id/ic_monkey_body"
-            android:layout_width="256dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="110dp"
-            android:rotation="0"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:pathMotionArc="none"
-            motion:transitionEasing="linear" />
-        <Constraint
-            android:id="@+id/ic_gorilla_head"
-            android:layout_width="119dp"
-            android:layout_height="170dp"
-            android:layout_marginBottom="155dp"
-            motion:layout_constraintBottom_toBottomOf="@+id/ic_monkey_body"
-            motion:layout_constraintEnd_toEndOf="@+id/ic_monkey_body"
-            motion:layout_constraintStart_toStartOf="@+id/ic_monkey_body" />
         <Constraint
             android:id="@+id/info_layout"
             android:layout_width="328dp"
@@ -177,34 +150,26 @@
             motion:layout_constraintEnd_toEndOf="@+id/info_layout"
             motion:layout_constraintStart_toStartOf="@+id/info_layout"
             motion:layout_constraintTop_toTopOf="@+id/info_layout" />
+        <Constraint
+            android:id="@+id/ic_android_robot"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/ic_cloud"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteY="36dp" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@+id/ic_logo"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="36dp"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-
-        <Constraint
-            android:id="@+id/ic_monkey_body"
-            android:layout_width="84dp"
-            android:layout_height="108dp"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="50dp"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-        <Constraint
-            android:id="@+id/ic_gorilla_head"
-            android:layout_width="40dp"
-            android:layout_height="56dp"
-            android:layout_marginBottom="60dp"
-            motion:layout_constraintBottom_toBottomOf="@+id/ic_monkey_body"
-            motion:layout_constraintEnd_toEndOf="@+id/ic_monkey_body"
-            motion:layout_constraintStart_toStartOf="@+id/ic_monkey_body" />
         <Constraint
             android:id="@+id/info_layout"
             android:layout_width="328dp"
@@ -269,5 +234,20 @@
             motion:layout_constraintBottom_toTopOf="@+id/tv_message"
             motion:layout_constraintEnd_toEndOf="@+id/tv_message"
             motion:layout_constraintStart_toStartOf="@+id/tv_message" />
+        <Constraint
+            android:id="@+id/ic_android_robot"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            motion:layout_constraintBottom_toTopOf="@+id/info_layout"
+            motion:layout_constraintEnd_toEndOf="@+id/info_layout" />
+        <Constraint
+            android:id="@+id/ic_cloud"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="141dp" />
     </ConstraintSet>
 </MotionScene>
